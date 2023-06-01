@@ -1,5 +1,5 @@
 {% set name = "ocha-anticipy" %}
-{% set version = "1.0.2" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 72fa74e082c34382223f271dfa5e903ea19ba5cb765ee9595960a8c711762d4e
+  sha256: eb15fa4ef6e740ae3c14ec855053bfc945649305aabd437fb6122791581a63db
 
 build:
   noarch: python
