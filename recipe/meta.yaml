@@ -31,7 +31,7 @@ requirements:
     - hdx-python-country
     - netcdf4
     - numpy
-    - pydantic
+    - pydantic <2.0
     - python-dateutil
     - pyyaml
     - rasterio
