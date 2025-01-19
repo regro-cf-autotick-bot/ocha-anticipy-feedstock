@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: be1ea7d3d043786e3792041e760b981429a2bd8bc4d5abfda1f725235c7d4447
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=45
     - wheel
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - cdsapi
     - cfgrib
     - cftime
@@ -45,6 +45,7 @@ test:
     - ochanticipy
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
